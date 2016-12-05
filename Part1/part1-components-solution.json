@@ -3,6 +3,7 @@
         "id": "component:input",
         "name": "input",
         "out": [
+            "component:input/Location",
             "component:input/DirectionQuery",
             "component:input/Time"
         ]
