@@ -1,0 +1,52 @@
+[
+    {
+        "components": [
+            "component:input",
+            "component:weather-manager",
+            "component:map-manager",
+            "component:alarm-manager",
+            "component:event-manager",
+            "component:output"
+        ],
+      "map": [
+      {
+      "from" : {
+        "message" : "component:input/DirectionQuery"
+      },
+      "to" : {
+        "message" : "component:map-manager/DirectionQuery"
+      }
+    }, 
+	  {
+      "from" : {
+        "message" : "component:event-manager/EventList"
+      },
+      "to" : {
+        "message" : "component:output/EventList"
+      }
+    }, 
+	  {
+      "from" : {
+        "message" : "component:weather-manager/Temperature"
+      },
+      "to" : {
+        "message" : "component:output/Temperature"
+      }
+    },
+	  {
+      "from" : {
+        "message" : "component:map-manager/DirectionList"
+      },
+      "to" : {
+        "message" : "component:output/DirectionList"
+      }
+    }, 
+	  {
+      "from" : {
+        "message" : "component:alarm-manager/Confirmation"
+      },
+      "to" : {
+        "message" : "component:output/Confirmation"
+      }
+    } 
+]

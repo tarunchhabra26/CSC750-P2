@@ -1,0 +1,130 @@
+[{
+        "components": [
+            "component:location-manager",
+            "component:time-manager",
+            "component:map-manager",
+            "component:driver-manager",
+            "component:interaction-manager",
+            "component:payment-manager",
+            "component:feedback-manager",
+            "component:customer-manager",
+            "component:order-manager"
+        ],
+        "id": "composition:primenow-central-authority",
+        "map": [
+            {
+                "from": {
+                    "message": "component:customer-manager/requestOrder"
+                },
+                "to": {
+                    "message": "component:order-manager/requestOrder"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/orderResponse"
+                },
+                "to": {
+                    "message": "component:customer-manager/orderResponse"
+                }
+            }, {
+                "from": {
+                    "message": "component:interaction-manager/authenticatedRequest"
+                },
+                "to": {
+                    "message": "component:order-manager/authenticatedRequest"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/authenticatedResponse"
+                },
+                "to": {
+                    "message": "component:interaction-manager/authenticatedResponse"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/driverBroadcast"
+                },
+                "to": {
+                    "message": "component:driver-manager/driverBroadcast"
+                }
+            }, {
+                "from": {
+                    "message": "component:driver-manager/driverResponse"
+                },
+                "to": {
+                    "message": "component:order-manager/driverResponse"
+                }
+            }, {
+                "from": {
+                    "message": "component:location-manager/locationResponse"
+                },
+                "to": {
+                    "message": "component:order-manager/locationResponse"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/locationRequest"
+                },
+                "to": {
+                    "message": "component:location-manager/locationRequest"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/journeyTimeRequest"
+                },
+                "to": {
+                    "message": "component:time-manager/journeyTimeRequest"
+                }
+            }, {
+                "from": {
+                    "message": "component:time-manager/journeyTimeResponse"
+                },
+                "to": {
+                    "message": "component:order-manager/journeyTimeResponse"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/routeRequest"
+                },
+                "to": {
+                    "message": "component:map-manager/routeRequest"
+                }
+            }, {
+                "from": {
+                    "message": "component:map-manager/routeResponse"
+                },
+                "to": {
+                    "message": "component:order-manager/routeResponse"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/paymentRequest"
+                },
+                "to": {
+                    "message": "component:payment-manager/paymentRequest"
+                }
+            }, {
+                "from": {
+                    "message": "component:payment-manager/paymentResponse"
+                },
+                "to": {
+                    "message": "component:order-manager/paymentResponse"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/feedbackRequest"
+                },
+                "to": {
+                    "message": "component:feedback-manager/feedbackRequest"
+                }
+            }, {
+                "from": {
+                    "message": "component:feedback-manager/feedback"
+                },
+                "to": {
+                    "message": "component:order-manager/feedback"
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,336 @@
+{
+  "@context": {
+    "@vocab": "http://mace/",
+    "service": "http://registry/service/",
+    "component": "http://registry/component/",
+    "composition": "http://registry/composition/",
+    "mace": "http://mace/",
+    "message": {
+      "@type": "@id"
+    },
+    "type": "@type",
+    "id": "@id"
+  },
+  "@graph": [
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:geo",
+          "name": "weatherLocation"
+        }
+      ],
+      "name": "InputWeatherLocation",
+      "id": "component:input/WeatherLocation"
+    },
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:string",
+          "name": "directionQuery"
+        }
+      ],
+      "name": "InputDirectionQuery",
+      "id": "component:input/DirectionQuery"
+    },
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:geo",
+          "name": "eventLocation"
+        }
+      ],
+      "name": "InputEventLocation",
+      "id": "component:input/EventLocation"
+    },
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:scheduledTime",
+          "name": "inputTime"
+        }
+      ],
+      "name": "InputTime",
+      "id": "component:input/Time"
+    },
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:geo",
+          "name": "weatherLocation"
+        }
+      ],
+      "name": "WeatherLocation",
+      "id": "component:weather-manager/weatherLocation"
+    },
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:geo",
+          "name": "directionQuery"
+        }
+      ],
+      "name": "DirectionQuery",
+      "id": "component:map-manager/DirectionQuery"
+    },
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:geo",
+          "name": "eventLocation"
+        }
+      ],
+      "name": "EventLocation",
+      "id": "component:event-manager/eventLocation"
+    },
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:scheduledTime",
+          "name": "time"
+        }
+      ],
+      "name": "Time",
+      "id": "component:alarm-manager/time"
+    },
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:float",
+          "name": "temperature"
+        }
+      ],
+      "name": "Temperature",
+      "id": "component:weather-manager/Temperature"
+    },
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:string",
+          "name": "directionList"
+        }
+      ],
+      "name": "DirectionList",
+      "id": "component:map-manager/DirectionList"
+    },
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:string",
+          "name": "eventList"
+        }
+      ],
+      "name": "eventList",
+      "id": "component:event-manager/EventList"
+    },
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:scheduledTime",
+          "name": "confirmation"
+        }
+      ],
+      "name": "Confirmation",
+      "id": "component:alarm-manager/Time"
+    },
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:float",
+          "name": "temperature"
+        }
+      ],
+      "name": "OutputTemperature",
+      "id": "component:output/Temperature"
+    },
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:string",
+          "name": "directionList"
+        }
+      ],
+      "name": "OutputDirectionList",
+      "id": "component:output/DirectionList"
+    },
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:string",
+          "name": "eventList"
+        }
+      ],
+      "name": "OutputEventList",
+      "id": "component:output/EventList"
+    },
+    {
+      "type": "mace:message",
+      "content": [
+        {
+          "type": "schema:string",
+          "name": "confirmation"
+        }
+      ],
+      "name": "OutputConfirmation",
+      "id": "component:output/Confirmation"
+    },
+    {
+      "type": "mace:component",
+      "id": "component:input",
+      "name": "input",
+      "out": [
+        "component:input/WeatherLocation",
+        "component:input/DirectionQuery",
+        "component:input/Time",
+        "component:input/EventLocation"
+      ]
+    },
+    {
+      "type": "mace:component",
+      "id": "component:weather-manager",
+      "in": [
+        "component:weather-manager/WeatherLocation"
+      ],
+      "name": "weather-manager",
+      "out": [
+        "component:weather-manager/Temperature"
+      ]
+    },
+    {
+      "type": "mace:component",
+      "id": "component:map-manager",
+      "in": [
+        "component:map-manager/DirectionQuery"
+      ],
+      "name": "map-manager",
+      "out": [
+        "component:map-manager/DirectionList"
+      ]
+    },
+    {
+      "type": "mace:component",
+      "id": "component:alarm-manager",
+      "in": [
+        "component:alarm-manager/Time"
+      ],
+      "name": "alarm-manager",
+      "out": [
+        "component:alarm-manager/Confirmation"
+      ]
+    },
+    {
+      "type": "mace:component",
+      "id": "component:event-manager",
+      "in": [
+        "component:event-manager/EventLocation"
+      ],
+      "name": "event-manager",
+      "out": [
+        "component:event-manager/EventList"
+      ]
+    },
+    {
+      "type": "mace:component",
+      "id": "component:output",
+      "name": "output",
+      "in": [
+        "component:output/Temperature",
+        "component:output/DirectionList",
+        "component:output/Confirmation",
+        "component:output/EventList"
+      ]
+    },
+    {
+      "components": [
+        "component:input",
+        "component:weather-manager",
+        "component:map-manager",
+        "component:alarm-manager",
+        "component:event-manager",
+        "component:output"
+      ],
+      "map": [
+        {
+          "to": {
+            "message": "component:weather-manager/WeatherLocation"
+          },
+          "from": {
+            "message": "component:input/WeatherLocation"
+          }
+        },
+        {
+          "to": {
+            "message": "component:output/Temperature"
+          },
+          "from": {
+            "message": "component:weather-manager/Temperature"
+          }
+        },
+        {
+          "to": {
+            "message": "component:map-manager/DirectionQuery"
+          },
+          "from": {
+            "message": "component:input/DirectionQuery"
+          }
+        },
+        {
+          "to": {
+            "message": "component:output/DirectionList"
+          },
+          "from": {
+            "message": "component:map-manager/DirectionList"
+          }
+        },
+        {
+          "to": {
+            "message": "component:alarm-manager/Time"
+          },
+          "from": {
+            "message": "component:input/Time"
+          }
+        },
+        {
+          "to": {
+            "message": "component:output/Confirmation"
+          },
+          "from": {
+            "message": "component:alarm-manager/Confirmation"
+          }
+        },
+        {
+          "to": {
+            "message": "component:event-manager/EventLocation"
+          },
+          "from": {
+            "message": "component:input/EventLocation"
+          }
+        },
+        {
+          "to": {
+            "message": "component:output/EventList"
+          },
+          "from": {
+            "message": "component:event-manager/EventList"
+          }
+        }
+      ],
+      "id": "composition:personal-assistant-1",
+      "type": "mace:composition"
+    }
+  ]
+}

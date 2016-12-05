@@ -1,0 +1,291 @@
+[
+    {
+        "name": "orderRequest",
+        "id": "component:buyer-manager/orderRequest",
+        "content": [
+            {
+                "type": "schema:buyer",
+                "name": "orderRequest"
+            }
+        ]
+    }, {
+        "name": "orderRequest",
+        "id": "component:order-manager/orderRequest",
+        "content": [
+            {
+                "type": "schema:buyer",
+                "name": "orderRequest"
+            }
+        ]
+    }, {
+        "name": "orderResponse",
+        "id": "component:order-manager/orderResponse",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "orderResponse"
+            }
+        ]
+    }, {
+        "name": "orderResponse",
+        "id": "component:buyer-manager/orderResponse",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "orderResponse"
+            }
+        ]
+    }, {
+        "name": "authenticatedRequest",
+        "id": "component:interaction-manager/authenticatedRequest",
+        "content": [
+            {
+                "type": "schema:interaction",
+                "name": "authenticatedRequest"
+            }
+        ]
+    }, {
+        "name": "authenticatedRequest",
+        "id": "component:order-manager/authenticatedRequest",
+        "content": [
+            {
+                "type": "schema:interaction",
+                "name": "authenticatedRequest"
+            }
+        ]
+    }, {
+        "name": "authenticatedResponse",
+        "id": "component:order-manager/authenticatedResponse",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "authenticatedResponse"
+            }
+        ]
+    }, {
+        "name": "authenticatedResponse",
+        "id": "component:interaction-manager/authenticatedResponse",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "authenticatedResponse"
+            }
+        ]
+    }, {
+        "name": "shipmentResponse",
+        "id": "component:booking-manager/shipmentResponse",
+        "content": [
+            {
+                "type": "schema:shipment",
+                "name": "shipmentResponse"
+            }
+        ]
+    }, {
+        "name": "shipmentResponse",
+        "id": "component:order-manager/shipmentResponse",
+        "content": [
+            {
+                "type": "schema:shipment",
+                "name": "shipmentResponse"
+            }
+        ]
+    }, {
+        "name": "shipmentBroadcast",
+        "id": "component:order-manager/shipmentBroadcast",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "shipmentBroadcast"
+            }
+        ]
+    }, {
+        "name": "shipmentBroadcast",
+        "id": "component:booking-manager/shipmentBroadcast",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "shipmentBroadcast"
+            }
+        ]
+    }, {
+        "name": "locationResponse",
+        "id": "component:location-manager/locationResponse",
+        "content": [
+            {
+                "type": "schema:location",
+                "name": "locationResponse"
+            }
+        ]
+    }, {
+        "name": "locationResponse",
+        "id": "component:order-manager/locationResponse",
+        "content": [
+            {
+                "type": "schema:location",
+                "name": "locationResponse"
+            }
+        ]
+    }, {
+        "name": "locationRequest",
+        "id": "component:order-manager/locationRequest",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "locationRequest"
+            }
+        ]
+    }, {
+        "name": "locationRequest",
+        "id": "component:location-manager/locationRequest",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "locationRequest"
+            }
+        ]
+    }, {
+        "name": "journeyTimeResponse",
+        "id": "component:time-manager/journeyTimeResponse",
+        "content": [
+            {
+                "type": "schema:location",
+                "name": "journeyTimeResponse"
+            }
+        ]
+    }, {
+        "name": "journeyTimeResponse",
+        "id": "component:order-manager/journeyTimeResponse",
+        "content": [
+            {
+                "type": "schema:location",
+                "name": "journeyTimeResponse"
+            }
+        ]
+    }, {
+        "name": "journeyTimeRequest",
+        "id": "component:order-manager/journeyTimeRequest",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "journeyTimeRequest"
+            }
+        ]
+    }, {
+        "name": "journeyTimeRequest",
+        "id": "component:time-manager/journeyTimeRequest",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "journeyTimeRequest"
+            }
+        ]
+    }, {
+        "name": "routeResponse",
+        "id": "component:map-manager/routeResponse",
+        "content": [
+            {
+                "type": "schema:map",
+                "name": "routeResponse"
+            }
+        ]
+    }, {
+        "name": "routeResponse",
+        "id": "component:order-manager/routeResponse",
+        "content": [
+            {
+                "type": "schema:map",
+                "name": "routeResponse"
+            }
+        ]
+    }, {
+        "name": "routeRequest",
+        "id": "component:order-manager/routeRequest",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "routeRequest"
+            }
+        ]
+    }, {
+        "name": "routeRequest",
+        "id": "component:map-manager/routeRequest",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "routeRequest"
+            }
+        ]
+    }, {
+        "name": "paymentResponse",
+        "id": "component:payment-manager/paymentResponse",
+        "content": [
+            {
+                "type": "schema:payment",
+                "name": "paymentResponse"
+            }
+        ]
+    }, {
+        "name": "paymentResponse",
+        "id": "component:order-manager/paymentResponse",
+        "content": [
+            {
+                "type": "schema:payment",
+                "name": "paymentResponse"
+            }
+        ]
+    }, {
+        "name": "paymentRequest",
+        "id": "component:order-manager/paymentRequest",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "paymentRequest"
+            }
+        ]
+    }, {
+        "name": "paymentRequest",
+        "id": "component:payment-manager/paymentRequest",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "paymentRequest"
+            }
+        ]
+    }, {
+        "name": "returns",
+        "id": "component:returns-manager/returns",
+        "content": [
+            {
+                "type": "schema:returns",
+                "name": "returns"
+            }
+        ]
+    }, {
+        "name": "returns",
+        "id": "component:order-manager/returns",
+        "content": [
+            {
+                "type": "schema:returns",
+                "name": "returns"
+            }
+        ]
+    }, {
+        "name": "returnsRequest",
+        "id": "component:order-manager/returnsRequest",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "returnsRequest"
+            }
+        ]
+    }, {
+        "name": "returnsRequest",
+        "id": "component:returns-manager/returnsRequest",
+        "content": [
+            {
+                "type": "schema:order",
+                "name": "returnsRequest"
+            }
+        ]
+    }
+]

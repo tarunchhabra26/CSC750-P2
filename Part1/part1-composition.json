@@ -1,0 +1,88 @@
+[
+    {
+        "components": [
+            "component:input",
+            "component:weather-manager",
+            "component:map-manager",
+            "component:alarm-manager",
+            "component:event-manager",
+            "component:location-manager",
+            "component:output"
+        ],
+        "map": [
+            {
+                "to": {
+                    "message": "component:location-manager/Location"
+                },
+                "from": {
+                    "message": "component:input/Location"
+                }
+            },
+            {
+                "to": {
+                    "message": "component:weather-manager/WeatherLocation"
+                },
+                "from": {
+                    "message": "component:location-manager/WeatherLocation"
+                }
+            },
+            {
+                "to": {
+                    "message": "component:event-manager/EventLocation"
+                },
+                "from": {
+                    "message": "component:location-manager/EventLocation"
+                }
+            },
+            {
+                "to": {
+                    "message": "component:output/Temperature"
+                },
+                "from": {
+                    "message": "component:weather-manager/Temperature"
+                }
+            },
+            {
+                "to": {
+                    "message": "component:map-manager/DirectionQuery"
+                },
+                "from": {
+                    "message": "component:input/DirectionQuery"
+                }
+            },
+            {
+                "to": {
+                    "message": "component:output/DirectionList"
+                },
+                "from": {
+                    "message": "component:map-manager/DirectionList"
+                }
+            },
+            {
+                "to": {
+                    "message": "component:alarm-manager/Time"
+                },
+                "from": {
+                    "message": "component:input/Time"
+                }
+            },
+            {
+                "to": {
+                    "message": "component:output/Confirmation"
+                },
+                "from": {
+                    "message": "component:alarm-manager/Confirmation"
+                }
+            },      
+            {
+                "to": {
+                    "message": "component:output/EventList"
+                },
+                "from": {
+                    "message": "component:event-manager/EventList"
+                }
+            },
+        ],
+        "id": "composition:personal-assistant-part-1"
+    }
+]

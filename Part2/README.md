@@ -1,0 +1,1 @@
+part2-composition-solution.json contains the completed composition as per the given set of components and messages

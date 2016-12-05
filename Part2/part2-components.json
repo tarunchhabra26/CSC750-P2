@@ -1,0 +1,62 @@
+[
+    {
+        "id": "component:input",
+        "name": "input",
+        "out": [
+            "component:input/WeatherLocation",
+            "component:input/DirectionQuery",
+            "component:input/Time",
+            "component:input/EventLocation",
+        ]
+    },
+    {
+        "id": "component:weather-manager",
+        "in": [
+           "component:weather-manager/WeatherLocation"
+        ],
+        "name": "weather-manager",
+        "out": [
+            "component:weather-manager/Temperature"
+        ]
+    },
+    {
+        "id": "component:map-manager",
+        "in": [
+            "component:map-manager/DirectionQuery"
+        ],
+        "name": "map-manager",
+        "out": [
+            "component:map-manager/DirectionList"
+        ]
+    },
+    {
+        "id": "component:alarm-manager",
+        "in": [
+            "component:alarm-manager/Time"
+        ],
+        "name": "alarm-manager",
+        "out": [
+            "component:alarm-manager/Confirmation"
+        ]
+    },
+    {
+        "id": "component:event-manager",
+        "in": [
+            "component:event-manager/EventLocation"
+        ],
+        "name": "event-manager",
+        "out": [
+            "component:event-manager/EventList"
+        ]
+    },
+    {
+        "id": "component:output",
+        "name": "output",
+        "in": [
+            "component:output/Temperature",
+            "component:output/DirectionList",
+            "component:output/Confirmation",
+            "component:output/EventList"
+        ]
+    }
+]

@@ -1,0 +1,15 @@
+SELECT (?messageFrom AS ?from) (?fromComponent AS ?sendingComponent) (?messageTo AS ?to) (?toComponent AS ?receivingComponent)
+WHERE {
+  ?composition <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://mace/composition>.
+  ?composition <http://mace/map> ?mapEntry.
+  ?mapEntry <http://mace/to> ?mapElementTo.
+  ?mapElementTo <http://mace/message> ?messageTo.
+  ?messageTo <http://mace/name> ?messageToName.
+  ?toComponent <http://mace/in> ?out.
+  ?mapEntry <http://mace/from> ?mapElementFrom.
+  ?mapElementFrom <http://mace/message> ?messageFrom.
+  ?fromComponent <http://mace/out> ?messageOutRepresentation
+  FILTER regex(str(?messageFrom),'(.*)inputMessage')
+  FILTER regex(str(?messageOutRepresentation),'(.*)inputMessage')
+  FILTER regex(?out, ?messageToName)
+}

@@ -1,0 +1,66 @@
+[
+    {
+        "name": "booking-manager",
+        "id": "component:booking-manager",
+        "in": ["component:booking-manager/bookingBroadcast"],
+        "out": ["component:booking-manager/bookingResponse"]
+    }, {
+        "name": "location-manager",
+        "id": "component:location-manager",
+        "in": ["component:location-manager/locationRequest"],
+        "out": ["component:location-manager/locationResponse"]
+    }, {
+        "name": "time-manager",
+        "id": "component:time-manager",
+        "in": ["component:time-manager/journeyTimeRequest"],
+        "out": ["component:time-manager/journeyTimeResponse"]
+    }, {
+        "name": "order-manager",
+        "id": "component:order-manager",
+        "in": [
+            "component:order-manager/locationResponse",
+            "component:order-manager/returns",
+            "component:order-manager/routeResponse",
+            "component:order-manager/orderRequest",
+            "component:order-manager/paymentResponse",
+            "component:order-manager/shipmentResponse",
+            "component:order-manager/authenticatedRequest",
+            "component:order-manager/journeyTimeResponse"
+        ],
+        "out": [
+            "component:order-manager/paymentRequest",
+            "component:order-manager/orderResponse",
+            "component:order-manager/authenticatedResponse",
+            "component:order-manager/journeyTimeRequest",
+            "component:order-manager/locationRequest",
+            "component:order-manager/routeRequest",
+            "component:order-manager/shipmentBroadcast",
+            "component:order-manager/returnsRequest"
+        ]
+    }, {
+        "name": "map-manager",
+        "id": "component:map-manager",
+        "in": ["component:map-manager/routeRequest"],
+        "out": ["component:map-manager/routeResponse"]
+    }, {
+        "name": "interaction-manager",
+        "id": "component:interaction-manager",
+        "in": ["component:interaction-manager/authenticatedResponse"],
+        "out": ["component:interaction-manager/authenticatedRequest"]
+    }, {
+        "name": "returns-manager",
+        "id": "component:returns-manager",
+        "in": ["component:returns-manager/returnsRequest"],
+        "out": ["component:returns-manager/returns"]
+    }, {
+        "name": "buyer-manager",
+        "id": "component:buyer-manager",
+        "in": ["component:buyer-manager/orderResponse"],
+        "out": ["component:buyer-manager/orderRequest"]
+    }, {
+        "name": "payment-manager",
+        "id": "component:payment-manager",
+        "in": ["component:payment-manager/paymentRequest"],
+        "out": ["component:payment-manager/paymentResponse"]
+    }
+]

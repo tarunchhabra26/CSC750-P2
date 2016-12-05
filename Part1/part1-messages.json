@@ -1,0 +1,183 @@
+[
+	{
+		"content": [
+			{
+				"type": "schema:geo",
+				"name": "inputLocation"
+			}
+		],
+		"name": "InputLocation",
+		"id": "component:input/Location"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:string",
+				"name": "directionQuery"
+			}
+		],
+		"name": "InputDirectionQuery",
+		"id": "component:input/DirectionQuery"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:scheduledTime",
+				"name": "inputTime"
+			}
+		],
+		"name": "InputTime",
+		"id": "component:input/Time"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:geo",
+				"name": "location"
+			}
+		],
+		"name": "Location",
+		"id": "component:location-manager/Location"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:geo",
+				"name": "weatherLocation"
+			}
+		],
+		"name": "LMWeatherLocation",
+		"id": "component:location-manager/WeatherLocation"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:geo",
+				"name": "eventLocation"
+			}
+		],
+		"name": "LMEventLocation",
+		"id": "component:location-manager/EventLocation"
+	},
+	
+	{
+		"content": [
+			{
+				"type": "schema:geo",
+				"name": "weatherLocation"
+			}
+		],
+		"name": "WeatherLocation",
+		"id": "component:weather-manager/WeatherLocation"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:geo",
+				"name": "directionQuery"
+			}
+		],
+		"name": "DirectionQuery",
+		"id": "component:map-manager/DirectionQuery"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:geo",
+				"name": "eventLocation"
+			}
+		],
+		"name": "EventLocation",
+		"id": "component:event-manager/EventLocation"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:scheduledTime",
+				"name": "time"
+			}
+		],
+		"name": "Time",
+		"id": "component:alarm-manager/Time"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:float",
+				"name": "temperature"
+			}
+		],
+		"name": "Temperature",		
+		"id": "component:weather-manager/Temperature"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:string",
+				"name": "directionList"
+			}
+		],
+		"name": "DirectionList",
+		"id": "component:map-manager/DirectionList"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:string",
+				"name": "eventList"
+			}
+		],
+		"name": "eventList",
+		"id": "component:event-manager/EventList"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:string",
+				"name": "confirmation"
+			}
+		],
+		"name": "Confirmation",
+		"id": "component:alarm-manager/Time"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:float",
+				"name": "temperature"
+			}
+		],
+		"name": "OutputTemperature",
+		"id": "component:output/Temperature"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:string",
+				"name": "directionList"
+			}
+		],
+		"name": "OutputDirectionList",
+		"id": "component:output/DirectionList"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:string",
+				"name": "eventList"
+			}
+		],
+		"name": "OutputEventList",
+		"id": "component:output/EventList"
+	},
+	{
+		"content": [
+			{
+				"type": "schema:string",
+				"name": "confirmation"
+			}
+		],
+		"name": "OutputConfirmation",
+		"id": "component:output/Confirmation"
+	}			
+]

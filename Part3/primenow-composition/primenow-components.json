@@ -1,0 +1,66 @@
+[
+    {
+        "name": "order-manager",
+        "id": "component:order-manager",
+        "in": [
+            "component:ride-manager/driverResponse",
+            "component:ride-manager/routeResponse",
+            "component:ride-manager/feedback",
+            "component:ride-manager/authenticatedRequest",
+            "component:ride-manager/locationResponse",
+            "component:ride-manager/paymentResponse",
+            "component:ride-manager/journeyTimeResponse",
+            "component:ride-manager/requestOrder"
+        ],
+        "out": [
+            "component:ride-manager/feedbackRequest",
+            "component:ride-manager/driverBroadcast",
+            "component:ride-manager/paymentRequest",
+            "component:ride-manager/routeRequest",
+            "component:ride-manager/orderResponse",
+            "component:ride-manager/authenticatedResponse",
+            "component:ride-manager/journeyTimeRequest",
+            "component:ride-manager/locationRequest"
+        ]
+    }, {
+        "name": "driver-manager",
+        "id": "component:driver-manager",
+        "in": ["component:driver-manager/driverBroadcast"],
+        "out": ["component:driver-manager/driverResponse"]
+    }, {
+        "name": "location-manager",
+        "id": "component:location-manager",
+        "in": ["component:location-manager/locationRequest"],
+        "out": ["component:location-manager/locationResponse"]
+    }, {
+        "name": "customer-manager",
+        "id": "component:customer-manager",
+        "in": ["component:customer-manager/rideResponse"],
+        "out": ["component:customer-manager/requestRide"]
+    }, {
+        "name": "time-manager",
+        "id": "component:time-manager",
+        "in": ["component:time-manager/journeyTimeRequest"],
+        "out": ["component:time-manager/journeyTimeResponse"]
+    }, {
+        "name": "feedback-manager",
+        "id": "component:feedback-manager",
+        "in": ["component:feedback-manager/feedbackRequest"],
+        "out": ["component:feedback-manager/feedback"]
+    }, {
+        "name": "map-manager",
+        "id": "component:map-manager",
+        "in": ["component:map-manager/routeRequest"],
+        "out": ["component:map-manager/routeResponse"]
+    }, {
+        "name": "interaction-manager",
+        "id": "component:interaction-manager",
+        "in": ["component:interaction-manager/authenticatedResponse"],
+        "out": ["component:interaction-manager/authenticatedRequest"]
+    }, {
+        "name": "payment-manager",
+        "id": "component:payment-manager",
+        "in": ["component:payment-manager/paymentRequest"],
+        "out": ["component:payment-manager/paymentResponse"]
+    }
+]

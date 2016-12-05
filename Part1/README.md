@@ -1,0 +1,1 @@
+In this part the components were incomplete with respect to the compositions. part1-components-solution.json contains the completed list of components.

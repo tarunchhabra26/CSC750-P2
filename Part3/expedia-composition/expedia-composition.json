@@ -1,0 +1,130 @@
+[{
+        "components": [
+            "component:location-manager",
+            "component:time-manager",
+            "component:map-manager",
+            "component:booking-manager",
+            "component:interaction-manager",
+            "component:payment-manager",
+            "component:returns-manager",
+            "component:buyer-manager",
+            "component:order-manager"
+        ],
+        "id": "composition:expedia-central-authority",
+        "map": [
+            {
+                "from": {
+                    "message": "component:buyer-manager/orderRequest"
+                },
+                "to": {
+                    "message": "component:order-manager/orderRequest"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/orderResponse"
+                },
+                "to": {
+                    "message": "component:buyer-manager/orderResponse"
+                }
+            }, {
+                "from": {
+                    "message": "component:interaction-manager/authenticatedRequest"
+                },
+                "to": {
+                    "message": "component:order-manager/authenticatedRequest"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/authenticatedResponse"
+                },
+                "to": {
+                    "message": "component:interaction-manager/authenticatedResponse"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/shipmentBroadcast"
+                },
+                "to": {
+                    "message": "component:booking-manager/shipmentBroadcast"
+                }
+            }, {
+                "from": {
+                    "message": "component:booking-manager/shipmentResponse"
+                },
+                "to": {
+                    "message": "component:order-manager/shipmentResponse"
+                }
+            }, {
+                "from": {
+                    "message": "component:location-manager/locationResponse"
+                },
+                "to": {
+                    "message": "component:order-manager/locationResponse"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/locationRequest"
+                },
+                "to": {
+                    "message": "component:location-manager/locationRequest"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/journeyTimeRequest"
+                },
+                "to": {
+                    "message": "component:time-manager/journeyTimeRequest"
+                }
+            }, {
+                "from": {
+                    "message": "component:time-manager/journeyTimeResponse"
+                },
+                "to": {
+                    "message": "component:order-manager/journeyTimeResponse"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/routeRequest"
+                },
+                "to": {
+                    "message": "component:map-manager/routeRequest"
+                }
+            }, {
+                "from": {
+                    "message": "component:map-manager/routeResponse"
+                },
+                "to": {
+                    "message": "component:order-manager/routeResponse"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/paymentRequest"
+                },
+                "to": {
+                    "message": "component:payment-manager/paymentRequest"
+                }
+            }, {
+                "from": {
+                    "message": "component:payment-manager/paymentResponse"
+                },
+                "to": {
+                    "message": "component:order-manager/paymentResponse"
+                }
+            }, {
+                "from": {
+                    "message": "component:order-manager/returnsRequest"
+                },
+                "to": {
+                    "message": "component:returns-manager/returnsRequest"
+                }
+            }, {
+                "from": {
+                    "message": "component:returns-manager/returns"
+                },
+                "to": {
+                    "message": "component:order-manager/returns"
+                }
+            }
+        ]
+    }
+]
