@@ -18,8 +18,8 @@ import org.apache.jena.rdf.model.ModelFactory;
 public class Router {
 
 	public static final String DEFAULT_INPUT = "input/Time";
-	public static final String DEFAULT_QUERY = "Part 4/query.rq";
-	public static final String DEFAULT_MODEL = "Part 4/composition.json-ld";
+	public static final String DEFAULT_QUERY = "Part4/query.rq";
+	public static final String DEFAULT_MODEL = "Part4/composition.json-ld";
 
 	private Model oModel;
 	private String input;
