@@ -23,5 +23,5 @@ P2 Submission of CSC 750
 * Composition is given in file : part2-composition-solution.json
 
 ## Part 3
-* The solution is given in Par3 Folder
+* The solution is given in Part3 Folder
 * Compositions are expedia-composition : Based on travel website expedia and primenow-composition : Based on Amazon's prime now service
